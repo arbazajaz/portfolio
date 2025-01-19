@@ -44,7 +44,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <Link href="/shop" passHref>
+          <Link legacyBehavior href="/shop" passHref>
             <a className="button--link button--flex">
               Shop Now <i className="ri-arrow-right-down-line button__icon"></i>
             </a>

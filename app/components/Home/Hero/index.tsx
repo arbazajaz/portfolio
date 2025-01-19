@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             freshness to your new ideas.
           </p>
           {/* Use <Link> for internal navigation */}
-          <Link href="#about">
+          <Link legacyBehavior href="#about">
             <a className="button button--flex">
               Explore <i className="ri-arrow-right-down-line button__icon"></i>
             </a>

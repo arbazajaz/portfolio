@@ -1,14 +1,12 @@
+"use client";
+
 import React, { useState } from "react";
 
 const Questions: React.FC = () => {
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
   const toggleQuestion = (index: number) => {
-    if (openQuestion === index) {
-      setOpenQuestion(null); // Close the current open question
-    } else {
-      setOpenQuestion(index); // Open the clicked question
-    }
+    setOpenQuestion((prev) => (prev === index ? null : index));
   };
 
   const questions = [
@@ -57,24 +55,28 @@ const Questions: React.FC = () => {
               openQuestion === index ? "open" : ""
             }`}
           >
-            <div
-              className="questions__item"
+            <header
+              className="questions__header"
               onClick={() => toggleQuestion(index)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") toggleQuestion(index);
+              }}
+              tabIndex={0}
+              role="button"
+              aria-expanded={openQuestion === index}
             >
-              <header className="questions__header">
-                <i
-                  className={`ri-add-line questions__icon ${
-                    openQuestion === index ? "ri-subtract-line" : "ri-add-line"
-                  }`}
-                ></i>
-                <h3 className="questions__item-title">{question.title}</h3>
-              </header>
-              {openQuestion === index && (
-                <div className="questions__content">
-                  <p className="questions__description">{question.content}</p>
-                </div>
-              )}
-            </div>
+              <i
+                className={`ri-add-line questions__icon ${
+                  openQuestion === index ? "ri-subtract-line" : "ri-add-line"
+                }`}
+              ></i>
+              <h3 className="questions__item-title">{question.title}</h3>
+            </header>
+            {openQuestion === index && (
+              <div className="questions__content">
+                <p className="questions__description">{question.content}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>

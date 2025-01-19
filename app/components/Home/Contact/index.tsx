@@ -1,10 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Contact: React.FC = () => {
   // Optional: Add a state for handling form inputs
-  const [email, setEmail] = React.useState("");
-  const [subject, setSubject] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   // Optional: Function to handle form submission
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
