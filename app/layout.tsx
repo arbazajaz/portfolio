@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "remixicon/fonts/remixicon.css";
 import "./globals.css";
 
+// Import the layout components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollUpButton from "./components/ScrollUpButton";
+import ClientScripts from "./components/ClientScripts";
+
+// Font configuration
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +35,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* Add the Header */}
+        <Header />
+
+        {/* Main content of the page */}
+        <main className="layout-content">{children}</main>
+
+        {/* Add the Footer */}
+        <Footer />
+
+        {/* Add ScrollUpButton */}
+        <ScrollUpButton />
+
+        <ClientScripts />
       </body>
     </html>
   );

@@ -4,20 +4,39 @@ const Steps: React.FC = () => {
   const steps = [
     {
       number: "01",
-      title: "Choose Plant",
-      description: "We have several varieties of plants you can choose from.",
+      title: "Analyze Requirements",
+      description:
+        "Understand the client's needs, gather detailed requirements, and plan the development roadmap.",
     },
     {
       number: "02",
-      title: "Place an order",
+      title: "Design & Prototype",
       description:
-        "Once your order is set, we move to the next step which is the shipping.",
+        "Create wireframes and prototypes to visualize the solution and ensure alignment with the client’s expectations.",
     },
     {
       number: "03",
-      title: "Get plants delivered",
+      title: "Develop Backend",
       description:
-        "Our delivery process is easy, you receive the plant direct to your door.",
+        "Write scalable, secure, and efficient server-side code using Laravel and PHP.",
+    },
+    {
+      number: "04",
+      title: "Integrate Frontend",
+      description:
+        "Integrate responsive, user-friendly frontend interfaces using Bootstrap, React, or Livewire.",
+    },
+    {
+      number: "05",
+      title: "Test & Optimize",
+      description:
+        "Conduct rigorous testing for performance, security, and scalability while optimizing the application for speed.",
+    },
+    {
+      number: "06",
+      title: "Deploy & Support",
+      description:
+        "Deploy the solution, ensure seamless integration, and provide ongoing support for enhancements.",
     },
   ];
 
@@ -25,7 +44,7 @@ const Steps: React.FC = () => {
     <section className="steps section container">
       <div className="steps__bg">
         <h2 className="section__title-center steps__title">
-          Steps to start your <br /> plants off right
+          Steps to Deliver <br /> Scalable Laravel Solutions
         </h2>
 
         <div className="steps__container grid">

@@ -9,11 +9,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
-      <Header />
-      {children}
-      <Footer />
-      <ScrollUpButton />
+    <div className="layout">
+      <main className="layout-content">{children}</main>
     </div>
   );
 };
