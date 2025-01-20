@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import socialLinks from "@/app/config/socialLinks";
 
 const Hero: React.FC = () => {
   return (
@@ -39,31 +40,17 @@ const Hero: React.FC = () => {
         <div className="home__social">
           <span className="home__social-follow">Connect With Me</span>
           <div className="home__social-links">
-            {/* Links open in new tab, add rel="noopener noreferrer" for security */}
-            <a
-              href="https://github.com/" // Replace with your GitHub profile
-              target="_blank"
-              rel="noopener noreferrer"
-              className="home__social-link"
-            >
-              <i className="ri-github-fill"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/" // Replace with your LinkedIn profile
-              target="_blank"
-              rel="noopener noreferrer"
-              className="home__social-link"
-            >
-              <i className="ri-linkedin-box-fill"></i>
-            </a>
-            <a
-              href="https://twitter.com/" // Replace with your Twitter profile
-              target="_blank"
-              rel="noopener noreferrer"
-              className="home__social-link"
-            >
-              <i className="ri-twitter-fill"></i>
-            </a>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home__social-link"
+              >
+                <i className={link.iconClass}></i>
+              </a>
+            ))}
           </div>
         </div>
       </div>
