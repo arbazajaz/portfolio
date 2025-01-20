@@ -8,9 +8,10 @@ const Footer: React.FC = () => {
       <div className="footer__container container grid">
         {/* Newsletter Section */}
         <div className="footer__content">
-          <Link legacyBehavior href="/" aria-label="Go to homepage">
+          <Link legacyBehavior href="#home" className="font-bold">
             <a className="footer__logo">
-              <i className="ri-leaf-line footer__logo-icon"></i> Plantex
+              Arbaz Ajaz
+              <i className="ri-terminal-box-fill nav__logo-icon ms-2"></i>
             </a>
           </Link>
           <h3 className="footer__title">

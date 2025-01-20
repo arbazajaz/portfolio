@@ -45,40 +45,21 @@ const Questions: React.FC = () => {
   return (
     <section className="questions section" id="faqs">
       <h2 className="section__title-center questions__title container">
-        Frequently Asked <br /> Questions
+        Some common questions <br /> were often asked
       </h2>
+
       <div className="questions__container container grid">
-        {questions.map((question, index) => (
-          <div
-            key={index}
-            className={`questions__group ${
-              openQuestion === index ? "open" : ""
-            }`}
-          >
-            <header
-              className="questions__header"
-              onClick={() => toggleQuestion(index)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") toggleQuestion(index);
-              }}
-              tabIndex={0}
-              role="button"
-              aria-expanded={openQuestion === index}
-            >
-              <i
-                className={`ri-add-line questions__icon ${
-                  openQuestion === index ? "ri-subtract-line" : "ri-add-line"
-                }`}
-              ></i>
-              <h3 className="questions__item-title">{question.title}</h3>
-            </header>
-            {openQuestion === index && (
+        {questions.map((question, groupIndex) => (
+          <div className="questions__group" key={groupIndex}>
+            <div className="questions__item">
+              <header className="questions__header">
+                <i className="ri-add-line questions__icon"></i>
+                <h3 className="questions__item-title">{question.title}</h3>
+              </header>
               <div className="questions__content">
-                <p className="questions__item-title questions__description">
-                  {question.content}
-                </p>
+                <p className="questions__description">{question.content}</p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

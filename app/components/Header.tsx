@@ -5,9 +5,10 @@ const Header: React.FC = () => {
   return (
     <header className="header" id="header">
       <nav className="nav container">
-        <Link legacyBehavior href="#home" className="nav__logo">
+        <Link legacyBehavior href="#home" className="nav__logo font-bold">
           <a>
-            <i className="ri-leaf-line nav__logo-icon"></i> Plantex
+            Arbaz Ajaz
+            <i className="ri-terminal-box-fill nav__logo-icon ms-2"></i>
           </a>
         </Link>
 
@@ -23,11 +24,11 @@ const Header: React.FC = () => {
                 <a className="nav__link">About</a>
               </Link>
             </li>
-            <li className="nav__item">
+            {/* <li className="nav__item">
               <Link legacyBehavior href="#products">
                 <a className="nav__link">Products</a>
               </Link>
-            </li>
+            </li> */}
             <li className="nav__item">
               <Link legacyBehavior href="#faqs">
                 <a className="nav__link">FAQs</a>
