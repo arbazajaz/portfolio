@@ -22,9 +22,10 @@ const Hero: React.FC = () => {
             Build Fast <br /> Applications with Laravel
           </h1>
           <p className="home__description">
-            I'm a professional PHP Laravel developer with a passion for building
-            robust, secure, and scalable web applications. From API integrations
-            to enterprise-level solutions, I turn ideas into reality.
+            I&apos;m a professional PHP Laravel developer with a passion for
+            building robust, secure, and scalable web applications. From API
+            integrations to enterprise-level solutions, I turn ideas into
+            reality.
           </p>
           {/* Use <Link> for internal navigation */}
           <Link legacyBehavior href="#about">

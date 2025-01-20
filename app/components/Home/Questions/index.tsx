@@ -1,14 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
 const Questions: React.FC = () => {
-  const [openQuestion, setOpenQuestion] = useState<number | null>(null);
-
-  const toggleQuestion = (index: number) => {
-    setOpenQuestion((prev) => (prev === index ? null : index));
-  };
-
   const questions = [
     {
       title: "How do you ensure scalable Laravel applications?",

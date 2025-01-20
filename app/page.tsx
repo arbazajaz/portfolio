@@ -7,7 +7,6 @@ import Contact from "./components/Home/Contact";
 import Layout from "./components/Layout";
 import "./assets/css/styles.css";
 import ClientScripts from "./components/ClientScripts";
-import ScrollReveal from "scrollreveal";
 
 export default function Home() {
   return (
