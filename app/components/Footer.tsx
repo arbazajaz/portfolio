@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import socialLinks from "../config/socialLinks";
 
 const Footer: React.FC = () => {
   return (
@@ -37,9 +38,9 @@ const Footer: React.FC = () => {
         <div className="footer__content">
           <h3 className="footer__title">Our Address</h3>
           <ul className="footer__data">
-            <li className="footer__information">1234 - Peru</li>
-            <li className="footer__information">La Libertad - 43210</li>
-            <li className="footer__information">+123-456-789</li>
+            <li className="footer__information">Lahore, Punjab</li>
+            <li className="footer__information">Pakistan</li>
+            <li className="footer__information">+92 3166140 726</li>
           </ul>
         </div>
 
@@ -47,36 +48,22 @@ const Footer: React.FC = () => {
         <div className="footer__content">
           <h3 className="footer__title">Contact Us</h3>
           <ul className="footer__data">
-            <li className="footer__information">+999 888 777</li>
+            <li className="footer__information">+92 3166140 726</li>
           </ul>
+
           <div className="footer__social">
-            <a
-              href="https://www.facebook.com/"
-              className="footer__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit us on Facebook"
-            >
-              <i className="ri-facebook-fill"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              className="footer__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit us on Instagram"
-            >
-              <i className="ri-instagram-line"></i>
-            </a>
-            <a
-              href="https://twitter.com/"
-              className="footer__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit us on Twitter"
-            >
-              <i className="ri-twitter-fill"></i>
-            </a>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                className="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit us on Facebook"
+              >
+                <i className={link.iconClass}></i>
+              </a>
+            ))}
           </div>
         </div>
 
